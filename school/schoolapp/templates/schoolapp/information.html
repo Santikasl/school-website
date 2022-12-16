@@ -1,0 +1,71 @@
+{% extends 'schoolapp/header.html' %}
+{% load static %}
+<html lang="en">
+{% block head %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/logo.ico' %}" type="image/x-icon">
+    <title>Информационные ресурсы</title>
+</head>
+{% endblock %}
+{% block name %}
+
+        <main class="main">
+            <section class="content">
+                <section class="content__gallery gallery">
+
+                    <div class="gallery__items">
+                        <div class="gallery__item gallery__item_big">
+                            <img src= "{% static 'img/information/1.jpg' %}" alt="">
+                        </div>
+                        <div class="gallery__item2 gallery__item_big">
+                            <h2 class="gallery__title">Черчение приложение</h2>
+                            <p>Техническое черчение - один из самых сложных предметов, целью которого является развитие теоретических знаний в области черчения и начертательной геометрии, технических навыков при работе чертежными инструментами, а также развитие
+                                объемно - пространственного мышления, приобретение навыков самостоятельной работы при выполнении и чтении чертежей. Данная программа позволяет вовлечь в процесс технического творчества детей, начиная со среднего школьного
+                                возраста, дает возможность обучающимся создавать чертежи своими руками, и заложить основы успешного освоения профессии инженера в будущем.</p>
+
+
+                            <h2 class="download"><a class="download" href="https://disk.yandex.by/d/CKGVoib7XdO9CQ">Скачать</a></h2>
+
+
+                        </div>
+                        <div class="gallery__item gallery__item_big">
+                            <img src="{% static 'img/information/2.jpeg' %}" alt="">
+                        </div>
+                        <div class="gallery__item2 gallery__item_big">
+                            <h2 class="gallery__title">Астрономия приложение</h2>
+                            <p>Энциклопедия откроет для читателя дверь в мир астрономии - древней науки о звездах и планетах, в наше время переживающей буквально второе рождение. Основы астрономической науки изложены в энциклопедии понятным и доходчивым
+                                языком, она иллюстрирована замечательными рисунками из старинных атласов, современными картами звездного неба, фотографиями, выполненными орбитальным телескопом, и красочными схемами. </p>
+
+
+                            <h2 class="download"><a class="download" href="https://disk.yandex.by/d/CKGVoib7XdO9CQ">Скачать</a></h2>
+
+
+                        </div>
+
+                        <div class="gallery__item gallery__item_big">
+                            <img src="{% static 'img/information/3.jpg' %}" alt="">
+                        </div>
+                        <div class="gallery__item2 gallery__item_big">
+                            <h2 class="gallery__title">Биология приложение</h2>
+                            <p>Пособие содержит материал, соответствующий содержанию курса биологии средней школы. В нем последовательно раскрываются наиболее общие свойства живых организмов, их многообразие от бактерий до человека, распространение, среда
+                                обитания, классификация, особенности строения и процессов жизнедеятельности, значение в природе и жизни человека</p>
+
+
+                            <h2 class="download"><a class="download" href="https://disk.yandex.by/d/CKGVoib7XdO9CQ">Скачать</a></h2>
+
+
+                        </div>
+
+
+                    </div>
+                </section>
+
+            </section>
+        </main>
+
+
+{% endblock %}

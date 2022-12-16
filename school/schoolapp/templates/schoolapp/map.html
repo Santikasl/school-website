@@ -1,0 +1,46 @@
+{% extends 'schoolapp/header.html' %}
+{% load static %}
+<html lang="en">
+{% block head %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/logo.ico' %}" type="image/x-icon">
+    <title>Мы на карте</title>
+</head>
+{% endblock %}
+{% block name %}
+        <main class="main">
+            <section class="content">
+                <section class="content__gallery gallery">
+
+                    <div class="gallery__items">
+                        <div class="gallery__item2 gallery__item_big">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1178.8730859887125!2d30.913067970537057!3d52.53644945445602!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sby!4v1671106097345!5m2!1sru!2sby" width="600" height="450" style="border:0;" allowfullscreen=""
+                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="gallery__item2 gallery__item_big">
+                            <h2 class="gallery__title">Как добраться</h2>
+                            <div>
+                                <p>Наш адрес: ул. Басенкова, 1, 246030, г. Гомель </br> Контактный телефон приёмной директора: +375 232 91 14 52 </br> Контактный телефон приёмной комиссии:+375 232 91 14 52 </br> Контактный телефон вахты: +375 232 91 14 53
+                                    50-53-17
+                                    </br> Email:school13.gomel@jdroo.by
+                                    </br> Проезд: от железнодорожного и автобусного вокзала автобусами №43</p>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                </section>
+
+            </section>
+        </main>
+
+
+
+
+{% endblock %}

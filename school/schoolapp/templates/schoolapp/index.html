@@ -1,0 +1,187 @@
+{% extends 'schoolapp/header.html' %}
+{% load static %}
+<html lang="en">
+{% block head %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/logo.ico' %}" type="image/x-icon">
+
+    <title>Главная</title>
+</head>
+{% endblock %}
+{% block name %}
+
+        <main class="main">
+            <section class="content">
+                <h1 class="content__title">ГУО «Средняя школа № 13 г. Гомеля»</h1>
+                <section class="content__gallery gallery">
+                    <div class="gallery__items">
+                        <div class="carousel">
+                            <div class="slides">
+                                <img src="{% static 'img/1.jpg' %}" alt="slide image" class="slide">
+                                <img src="{% static 'img/2.jpg' %}" alt="slide image" class="slide">
+
+                                <img src="{% static 'img/3.jpg' %}" alt="slide image" class="slide">
+
+
+                            </div>
+                            <div class="controls">
+                                <div class="control prev-slide">&#9668;</div>
+                                <div class="control next-slide">&#9658;</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+                <section class="content__info info">
+                    <h2 class="info__title">Информация</h2>
+                    <div class="info__items">
+                        <div class="info__item">
+                            <a href="{% url 'photo_album' %}" class="info__image">
+                                <img src="{% static 'img/icons/0.jpg' %}" alt="">
+                            </a>
+
+                        </div>
+                        <div class="info__item">
+                            <a href="{% url 'news' %}" class="info__image">
+                                <img src="{% static 'img/icons/1.jpg' %}" alt="">
+                            </a>
+
+                        </div>
+                        <div class="info__item">
+                            <a href="{% url 'schedule' %}" class="info__image">
+                                <img src="{% static 'img/icons/2.jpg' %}" alt="">
+                            </a>
+
+                        </div>
+
+                        <div class="info__item">
+                            <a href="{% url 'students' %}" class="info__image">
+                                <img src="{% static 'img/icons/3.png' %}" alt="">
+                            </a>
+
+                        </div>
+
+                        <div class="info__item">
+                            <a href="{% url 'information' %}" class="info__image">
+                                <img src="{% static 'img/icons/7.jpg' %}" alt="">
+                            </a>
+
+                        </div>
+                        <div class="info__item">
+                            <a href="{% url 'family' %}" class="info__image">
+                                <img src="{% static 'img/icons/8.jpg' %}" alt="">
+                            </a>
+
+                        </div>
+                        <div class="info__item">
+                            <a href="{% url 'map' %}" class="info__image">
+                                <img src="{% static 'img/icons/9.jpg' %}" alt="">
+                            </a>
+
+                        </div>
+                        <div class="info__item">
+                            <a href="http://osvod.www.by/info.html" class="info__image">
+                                <img src="{% static 'img/icons/10.jpg' %}" alt="">
+                            </a>
+
+                        </div>
+                        <div class="info__item">
+                            <a href="http://www.cenadm.gov.by/ru/rayon/view/nkdn-tsentralnogo-rajona-ggomelja-informiruetn-13064/" class="info__image">
+                                <img src="{% static 'img/icons/6.jpg' %}" alt="">
+                            </a>
+
+                        </div>
+                        <div class="info__item">
+                            <a href="{% url 'mcs' %}" class="info__image">
+                                <img src="{% static 'img/icons/4.jpg' %}" alt="">
+                            </a>
+
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content__info info">
+                    <h2 class="info__title">Новости</h2>
+                    <div class="news_items">
+                        <a href="page_11.html" class="news__image">
+
+                            <div class="news_item">
+
+                                <div class="news__image"><img src="{% static 'img/news/1.png' %}" alt=""></div>
+                                <p class="news_titel">Встреча с председателем РО ОСВОД Центрального района Романовым Н.М.</p>
+                                <p class="news_date">12.12.2022</p>
+                                <p class="news_description">«Правила поведения на водоёмах зимой » обсуждали учащиеся на встрече с председателем РО ОСВОД Центрального района Романовым Н.М.</p>
+
+                            </div>
+                        </a>
+                        <a href="page_11.html" class="news__image">
+
+                            <div class="news_item">
+
+                                <div class="news__image"><img src="{% static 'img/news/1.png' %}" alt=""></div>
+                                <p class="news_titel">Встреча с председателем РО ОСВОД Центрального района Романовым Н.М.</p>
+                                <p class="news_date">12.12.2022</p>
+                                <p class="news_description">«Правила поведения на водоёмах зимой » обсуждали учащиеся на встрече с председателем РО ОСВОД Центрального района Романовым Н.М.</p>
+
+                            </div>
+                        </a>
+                        <a href="page_11.html" class="news__image">
+
+                            <div class="news_item">
+
+                                <div class="news__image"><img src="{% static 'img/news/1.png' %}" alt=""></div>
+                                <p class="news_titel">Встреча с председателем РО ОСВОД Центрального района Романовым Н.М.</p>
+                                <p class="news_date">12.12.2022</p>
+                                <p class="news_description">«Правила поведения на водоёмах зимой » обсуждали учащиеся на встрече с председателем РО ОСВОД Центрального района Романовым Н.М.</p>
+
+                            </div>
+                        </a>
+                        <a href="page_11.html" class="news__image">
+
+                            <div class="news_item">
+
+                                <div class="news__image"><img src="{% static 'img/news/1.png' %}" alt=""></div>
+                                <p class="news_titel">Встреча с председателем РО ОСВОД Центрального района Романовым Н.М.</p>
+                                <p class="news_date">12.12.2022</p>
+                                <p class="news_description">«Правила поведения на водоёмах зимой » обсуждали учащиеся на встрече с председателем РО ОСВОД Центрального района Романовым Н.М.</p>
+
+                            </div>
+                        </a>
+                        <a href="page_11.html" class="news__image">
+
+                            <div class="news_item">
+
+                                <div class="news__image"><img src="{% static 'img/news/1.png' %}" alt=""></div>
+                                <p class="news_titel">Встреча с председателем РО ОСВОД Центрального района Романовым Н.М.</p>
+                                <p class="news_date">12.12.2022</p>
+                                <p class="news_description">«Правила поведения на водоёмах зимой » обсуждали учащиеся на встрече с председателем РО ОСВОД Центрального района Романовым Н.М.</p>
+
+                            </div>
+                        </a>
+
+                    </div>
+                </section>
+
+
+            </section>
+            </section>
+
+
+        </main>
+
+
+
+
+
+
+    {% block scripts %}
+    <script src="{% static 'js/slide.js' %}" defer></script>
+    {% endblock scripts %}
+
+
+
+{% endblock %}

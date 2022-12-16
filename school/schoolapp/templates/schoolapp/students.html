@@ -1,0 +1,50 @@
+{% extends 'schoolapp/header.html' %}
+{% load static %}
+
+<html lang="en">
+{% block head %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/logo.ico' %}" type="image/x-icon">
+    <title>Учащимся</title>
+</head>
+{% endblock %}
+{% block name %}
+        <main class="main">
+            <section class="content">
+                <section class="content__info info ">
+                    <h2 class="info__title2">Учащимся</h2>
+                    <div class="info__items students">
+                        <div class="info__item">
+                             <a href="{% url 'photo_album' %}" class="info__image">
+                                <img src="{% static 'img/icons/0.jpg' %}" alt="">
+                            </a>
+
+                        </div>
+                        <div class="info__item">
+                           <a href="{% url 'news' %}" class="info__image">
+                                   <img src="{% static 'img/icons/1.jpg' %}" alt="">
+                            </a>
+
+                        </div>
+                        <div class="info__item">
+                            <a href="{% url 'schedule' %}" class="info__image">
+                                   <img src="{% static 'img/icons/2.jpg' %}" alt="">
+                            </a>
+
+                        </div>
+
+                        <div class="info__item">
+                              <a href="{% url 'information' %}" class="info__image">
+                                 <img src="{% static 'img/icons/7.jpg' %}" alt="">
+                            </a>
+
+                        </div>
+
+                    </div>
+                </section>
+            </section>
+      {% endblock %}

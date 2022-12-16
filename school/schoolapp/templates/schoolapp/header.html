@@ -1,0 +1,59 @@
+
+{% load static %}
+<html lang="en">
+{% block head %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/logo.ico' %}" type="image/x-icon">
+    <title>Главная</title>
+</head>
+{% endblock %}
+<body>
+{% block title %}
+
+    <div class="wrapper">
+        <header class="header">
+            <a href="{% url 'index' %}"><img class="header__logo" src="{% static 'img/logo.jpg' %}" alt="">
+            </a>
+            <nav class="header__menu">
+                <ul class="header__list">
+                    <li><a href="{% url 'index' %}" class="header__link">Главная</a></li>
+                    <li><a href="{% url 'students' %}" class="header__link">Учащимся</a></li>
+                    <li><a href="{% url 'news' %}" class="header__link">Новости</a></li>
+                    <li><a href="{% url 'map' %}" class="header__link">Мы на карте</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+
+{% endblock %}
+
+
+
+{% block name %}
+{% endblock %}
+</div>
+{% block footer %}
+<footer class="footer">
+        <div class="footer__copy">
+            Наш адрес: ул. Басенкова, 1, 246030, г. Гомель </br> Контактный телефон приёмной директора: +375 232 91 14 52 </br> Контактный телефон приёмной комиссии:+375 232 91 14 52 </br> Контактный телефон вахты: +375 232 91 14 53 50-53-17
+            </br> Email:school13.gomel@jdroo.by
+            </br> Проезд: от железнодорожного и автобусного вокзала автобусами №43
+
+        </div>
+        <div class="footer__text">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d781.1415157883747!2d30.91321637025941!3d52.53653754995382!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sby!4v1671087186813!5m2!1sru!2sby" width="400" height="300" style="border:0;" allowfullscreen=""
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </footer>
+{% endblock %}
+</body>
+
+
+</html>
