@@ -2,46 +2,41 @@
 {% load static %}
 <html lang="en">
 {% block head %}
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
-    <link rel="shortcut icon" href="{% static 'img/logo.ico' %}" type="image/x-icon">
-    <title>Фото альбом</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
+        <link rel="shortcut icon" href="{% static 'img/logo.ico' %}" type="image/x-icon">
+        <title>Фото альбом</title>
+    </head>
 {% endblock %}
 {% block name %}
 
-        <main class="main">
-            <section class="content">
+    <main class="main">
+        <section class="content">
+            <div class="gallary">
+                {% for photo in photos %}
+                    <div class="responsive info__item">
+                        <div class="img">
+                            <img src="{{ photo.img.url }}" alt="Trolltunga Norway" width="300" height="200">
+                            <div class="desc">{{ photo.date }} </br> {{ photo.title }}</div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="clearfix"></div>
 
-                <div class="container">
-
-
-	<div class="main-img">
-		<button class="close">&times;</button>
-		<button class="next">Next</button>
-		<button class="prev">Prev</button>
-		<img src="" alt="">
-	</div>
-	<div class="overlay"></div>
-	<div class="gallery-wrapper">
-        {% for photo in photos %}
-		<div class="img">
-			<img src="{{ photo.img.url }}" alt="">
-            <p>{{ photo.title }}</p>
-            <p>{{ photo.date }}</p>
-		</div>
-		{% endfor %}
-	</div>
-</div>
-
-
-            </section>
-        </main>
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+                <span class="close">×</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+            </div>
+        </section>
+    </main>
 
     {% block scripts %}
-    <script src="{% static 'js/gallery.js' %}" defer></script>
+        <script src="{% static 'js/gallery.js' %}" defer></script>
     {% endblock scripts %}
 {% endblock %}
