@@ -15,54 +15,33 @@
 
         <main class="main">
             <section class="content">
-                <section class="content__gallery gallery">
 
-                    <div class="gallery__items">
-
-                        <div class="gallery__item ">
-                            <img src="{% static 'img\product's/0.jpg' %}" alt="">
-                        </div>
-                        <div class="gallery__item ">
-                             <img src="{% static 'img\product's/0.jpg' %}" alt="">
-                        </div>
-                        <div class="gallery__item ">
-                              <img src="{% static 'img\product's/0.jpg' %}" alt="">
-                        </div>
-                        <div class="gallery__item ">
-                             <img src="{% static 'img\product's/0.jpg' %}" alt="">
-                        </div>
-                        <div class="gallery__item ">
-                            <img src="{% static 'img\product's/0.jpg' %}" alt="">
-                        </div>
-                        <div class="gallery__item ">
-                             <img src="{% static 'img\product's/0.jpg' %}" alt="">
-                        </div>
-                        <div class="gallery__item ">
-                             <img src="{% static 'img\product's/0.jpg' %}" alt="">
-                        </div>
-                        <div class="gallery__item ">
-                             <img src="{% static 'img\product's/0.jpg' %}" alt="">
-                        </div>
-                        <div class="gallery__item ">
-                              <img src="{% static 'img\product's/0.jpg' %}" alt="">
-                        </div>
-                        <div class="gallery__item ">
-                              <img src="{% static 'img\product's/0.jpg' %}" alt="">
-                        </div>
-                        <div class="gallery__item ">
-                            <img src="{% static 'img\product's/0.jpg' %}" alt="">
-                        </div>
-                        <div class="gallery__item ">
-                             <img src="{% static 'img\product's/0.jpg' %}" alt="">
-                        </div>
+                <div class="container">
 
 
+	<div class="main-img">
+		<button class="close">&times;</button>
+		<button class="next">Next</button>
+		<button class="prev">Prev</button>
+		<img src="" alt="">
+	</div>
+	<div class="overlay"></div>
+	<div class="gallery-wrapper">
+        {% for photo in photos %}
+		<div class="img">
+			<img src="{{ photo.img.url }}" alt="">
+            <p>{{ photo.title }}</p>
+            <p>{{ photo.date }}</p>
+		</div>
+		{% endfor %}
+	</div>
+</div>
 
-                    </div>
-                </section>
 
             </section>
         </main>
 
-
+    {% block scripts %}
+    <script src="{% static 'js/gallery.js' %}" defer></script>
+    {% endblock scripts %}
 {% endblock %}

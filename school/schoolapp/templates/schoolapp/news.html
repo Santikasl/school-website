@@ -2,83 +2,72 @@
 {% load static %}
 <html lang="en">
 {% block head %}
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
-    <link rel="shortcut icon" href="{% static 'img/logo.ico' %}" type="image/x-icon">
-    <title>Новости</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
+        <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,200,0,0"/>
+        <link rel="shortcut icon" href="{% static 'img/logo.ico' %}" type="image/x-icon">
+        <title>Новости</title>
+    </head>
 {% endblock %}
 {% block name %}
 
-        <main class="main">
-            <section class="content">
-                <section class="content__info info">
+    <main class="main">
+        <section class="content">
+            <section class="content__info info">
+                <div class="news_option">
+
                     <h2 class="info__title">Новости</h2>
-                    <div class="news_items">
+                    <form class="sort_form" action="{% url 'news' %}" method="get">
+
+                        <input class="sort_value" name="order_field" type="submit" value="-date">
+                        <input class="sort" name="order_field" type="submit" value="Новые">
+                        <input class="sort_value" name="order_field" type="submit" value="date">
+                        <input class="sort" name="order_field" type="submit" value="Старые">
+                    </form>
+
+                    <form class="search-box" method="get" action="{% url 'news' %}">
+                        <button style="background: none; border: none; padding: 0"><span
+                                style="font-size: 30px; vertical-align: -1px; color: #9B9B9B"
+                                class="material-symbols-outlined">search</span></button>
+                        <input class="search" style="vertical-align: 4px; width: 205px;" type="search" name="focus"
+                               placeholder="Поиск" id="search-input" value="">
+                    </form>
+                </div>
+                <div class="news_items">
+                    {% for news in news %}
                         <a href="page_11.html" class="news__image">
 
                             <div class="news_item">
 
-                                 <div class="news__image"><img src="{% static 'img/news/1.png' %}" alt=""></div>
-                                <p class="news_titel">Встреча с председателем РО ОСВОД Центрального района Романовым Н.М.</p>
-                                <p class="news_date">12.12.2022</p>
-                                <p class="news_description">«Правила поведения на водоёмах зимой » обсуждали учащиеся на встрече с председателем РО ОСВОД Центрального района Романовым Н.М.</p>
+                                <div class="news__image"><img src="{{ news.img.url }}" alt=""></div>
+                                <p class="news_titel">{{ news.title|linebreaksbr }}</p>
+                                <p class="news_date">{{ news.date }}</p>
+                                <p class="news_description">{{ news.description|linebreaksbr }}</p>
 
                             </div>
                         </a>
-                        <a href="page_11.html" class="news__image">
+                    {% endfor %}
 
-                            <div class="news_item">
 
-                                <div class="news__image"><img src="{% static 'img/news/1.png' %}" alt=""></div>
-                                <p class="news_titel">Встреча с председателем РО ОСВОД Центрального района Романовым Н.М.</p>
-                                <p class="news_date">12.12.2022</p>
-                                <p class="news_description">«Правила поведения на водоёмах зимой » обсуждали учащиеся на встрече с председателем РО ОСВОД Центрального района Романовым Н.М.</p>
+                    <nav class="list-pages">
+                    <ul>
+                        {% for news in paginator.page_range %}
+                            <li class="page-num">
+                                <a href="?page={{ news }}">{{ news }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                    </nav>
 
-                            </div>
-                        </a>
-                        <a href="page_11.html" class="news__image">
-
-                            <div class="news_item">
-
-                              <div class="news__image"><img src="{% static 'img/news/1.png' %}" alt=""></div>
-                                <p class="news_titel">Встреча с председателем РО ОСВОД Центрального района Романовым Н.М.</p>
-                                <p class="news_date">12.12.2022</p>
-                                <p class="news_description">«Правила поведения на водоёмах зимой » обсуждали учащиеся на встрече с председателем РО ОСВОД Центрального района Романовым Н.М.</p>
-
-                            </div>
-                        </a>
-                        <a href="page_11.html" class="news__image">
-
-                            <div class="news_item">
-
-                                 <div class="news__image"><img src="{% static 'img/news/1.png' %}" alt=""></div>
-                                <p class="news_titel">Встреча с председателем РО ОСВОД Центрального района Романовым Н.М.</p>
-                                <p class="news_date">12.12.2022</p>
-                                <p class="news_description">«Правила поведения на водоёмах зимой » обсуждали учащиеся на встрече с председателем РО ОСВОД Центрального района Романовым Н.М.</p>
-
-                            </div>
-                        </a>
-                        <a href="page_11.html" class="news__image">
-
-                            <div class="news_item">
-
-                                <div class="news__image"><img src="{% static 'img/news/1.png' %}" alt=""></div>
-                                <p class="news_titel">Встреча с председателем РО ОСВОД Центрального района Романовым Н.М.</p>
-                                <p class="news_date">12.12.2022</p>
-                                <p class="news_description">«Правила поведения на водоёмах зимой » обсуждали учащиеся на встрече с председателем РО ОСВОД Центрального района Романовым Н.М.</p>
-
-                            </div>
-                        </a>
-
-                    </div>
-                </section>
-
+                </div>
             </section>
-        </main>
+
+        </section>
+    </main>
 
 
 

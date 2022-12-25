@@ -105,63 +105,22 @@
                 </section>
 
                 <section class="content__info info">
-                    <h2 class="info__title">Новости</h2>
+                    <h2 class="info__title">Последние новости</h2>
                     <div class="news_items">
+                        {% for news in news  %}
                         <a href="page_11.html" class="news__image">
 
                             <div class="news_item">
 
-                                <div class="news__image"><img src="{% static 'img/news/1.png' %}" alt=""></div>
-                                <p class="news_titel">Встреча с председателем РО ОСВОД Центрального района Романовым Н.М.</p>
-                                <p class="news_date">12.12.2022</p>
-                                <p class="news_description">«Правила поведения на водоёмах зимой » обсуждали учащиеся на встрече с председателем РО ОСВОД Центрального района Романовым Н.М.</p>
+                                <div class="news__image"><img src="{{ news.img.url }}" alt=""></div>
+                                <p class="news_titel">{{ news.title|linebreaksbr }}</p>
+                                <p class="news_date">{{ news.date }}</p>
+                                <p class="news_description">{{ news.description|linebreaksbr }}</p>
 
                             </div>
                         </a>
-                        <a href="page_11.html" class="news__image">
+                        {% endfor %}
 
-                            <div class="news_item">
-
-                                <div class="news__image"><img src="{% static 'img/news/1.png' %}" alt=""></div>
-                                <p class="news_titel">Встреча с председателем РО ОСВОД Центрального района Романовым Н.М.</p>
-                                <p class="news_date">12.12.2022</p>
-                                <p class="news_description">«Правила поведения на водоёмах зимой » обсуждали учащиеся на встрече с председателем РО ОСВОД Центрального района Романовым Н.М.</p>
-
-                            </div>
-                        </a>
-                        <a href="page_11.html" class="news__image">
-
-                            <div class="news_item">
-
-                                <div class="news__image"><img src="{% static 'img/news/1.png' %}" alt=""></div>
-                                <p class="news_titel">Встреча с председателем РО ОСВОД Центрального района Романовым Н.М.</p>
-                                <p class="news_date">12.12.2022</p>
-                                <p class="news_description">«Правила поведения на водоёмах зимой » обсуждали учащиеся на встрече с председателем РО ОСВОД Центрального района Романовым Н.М.</p>
-
-                            </div>
-                        </a>
-                        <a href="page_11.html" class="news__image">
-
-                            <div class="news_item">
-
-                                <div class="news__image"><img src="{% static 'img/news/1.png' %}" alt=""></div>
-                                <p class="news_titel">Встреча с председателем РО ОСВОД Центрального района Романовым Н.М.</p>
-                                <p class="news_date">12.12.2022</p>
-                                <p class="news_description">«Правила поведения на водоёмах зимой » обсуждали учащиеся на встрече с председателем РО ОСВОД Центрального района Романовым Н.М.</p>
-
-                            </div>
-                        </a>
-                        <a href="page_11.html" class="news__image">
-
-                            <div class="news_item">
-
-                                <div class="news__image"><img src="{% static 'img/news/1.png' %}" alt=""></div>
-                                <p class="news_titel">Встреча с председателем РО ОСВОД Центрального района Романовым Н.М.</p>
-                                <p class="news_date">12.12.2022</p>
-                                <p class="news_description">«Правила поведения на водоёмах зимой » обсуждали учащиеся на встрече с председателем РО ОСВОД Центрального района Романовым Н.М.</p>
-
-                            </div>
-                        </a>
 
                     </div>
                 </section>
