@@ -12,16 +12,23 @@ class Index(ListView):
 
 class NewsView(ListView):
     paginate_by = 5
-    queryset = News.objects.all().order_by('-date')
+    queryset = News.objects.all()
     template_name = 'schoolapp/news.html'
     context_object_name = 'news'
 
-    def get(self, request):
-        order_field = request.GET.get('order_field')
+    def get_queryset(self):
+        order_field = self.request.GET.get('order_field')
         if order_field:
-            self.queryest = self.queryset.order_by('date')
-            print(self.queryset)
-        return super().get(request)
+            self.queryset = self.queryset.order_by(order_field)
+
+        return self.queryset
+
+    def get(self, request):
+        super().get(request)
+        order_field = self.request.GET.get('order_field')
+        context = self.get_context_data()
+        context['order_field'] = order_field
+        return self.render_to_response(context)
 
 
 

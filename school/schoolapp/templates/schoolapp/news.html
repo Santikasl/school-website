@@ -57,7 +57,7 @@
                     <ul>
                         {% for news in paginator.page_range %}
                             <li class="page-num">
-                                <a href="?page={{ news }}">{{ news }}</a>
+                                <a href="?page={{ news }}&order_field={{ order_field }}">{{ news }}</a>
                             </li>
                         {% endfor %}
                     </ul>
