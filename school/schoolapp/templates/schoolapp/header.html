@@ -11,26 +11,44 @@
     <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
     <link rel="shortcut icon" href="{% static 'img/logo.ico' %}" type="image/x-icon">
     <title>Главная</title>
+
 </head>
 {% endblock %}
 <body>
 {% block title %}
 
     <div class="wrapper">
-        <header class="header">
-            <a href="{% url 'index' %}"><img class="header__logo" src="{% static 'img/logo.jpg' %}" alt="">
-            </a>
-            <nav class="header__menu">
-                <ul class="header__list">
-                    <li><a href="{% url 'index' %}" class="header__link">Главная</a></li>
-                    <li><a href="{% url 'students' %}" class="header__link">Учащимся</a></li>
-                    <li><a href="{% url 'news' %}" class="header__link">Новости</a></li>
-                    <li><a href="{% url 'map' %}" class="header__link">Мы на карте</a></li>
-                </ul>
-            </nav>
-        </header>
+{#        <header class="header">#}
+{#            <a href="{% url 'index' %}"><img class="header__logo" src="{% static 'img/logo.jpg' %}" alt="">#}
+{#            </a>#}
+{#            <nav class="header__menu">#}
+{#                <ul class="header__list">#}
+{#                    <li><a href="{% url 'index' %}" class="header__link">Главная</a></li>#}
+{#                    <li><a href="{% url 'students' %}" class="header__link">Учащимся</a></li>#}
+{#                    <li><a href="{% url 'news' %}" class="header__link">Новости</a></li>#}
+{#                    <li><a href="{% url 'map' %}" class="header__link">Мы на карте</a></li>#}
+{#                </ul>#}
+{#            </nav>#}
+{#        </header>#}
 
-
+<nav>
+    <a href="{% url 'index' %}">
+        <div class="logo">
+            <img decoding="async" src="{% static 'img/logo.jpg' %}" alt="Logo Image">
+        </div>
+    </a>
+        <div class="hamburger">
+            <div class="bars1"></div>
+            <div class="bars2"></div>
+            <div class="bars3"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a class="header_a" href="{% url 'index' %}">Главная</a></li>
+            <li><a class="header_a" href="{% url 'students' %}">Учащимся</a></li>
+            <li><a class="header_a" href="{% url 'news' %}">Новости</a></li>
+            <li><a class="header_a" href="{% url 'map' %}">Мы на карте</a></li>
+        </ul>
+    </nav>
 
 {% endblock %}
 
@@ -52,7 +70,9 @@
                 loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </footer>
+    <script src="{% static 'js/header.js' %}" defer></script>
 {% endblock %}
+
 </body>
 
 

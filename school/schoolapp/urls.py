@@ -1,13 +1,14 @@
 from django.urls import include
 from django.urls import re_path as url
 from django.urls import path, reverse
-from .views import Index,NewsView, PhotoView
+from .views import Index,NewsView, PhotoView, OneNews
 from django.shortcuts import render
 
 urlpatterns = [
     path('', Index.as_view(), name='index'),
     path('students/', lambda request: render(request, 'schoolapp/students.html'), name='students'),
     path('news/', NewsView.as_view(), name='news'),
+    path('news/<int:pk>/', OneNews.as_view(), name='oneNews'),
     path('map/', lambda request: render(request, 'schoolapp/map.html'), name='map'),
     path('family/', lambda request: render(request, 'schoolapp/family.html'), name='family'),
     path('information/', lambda request: render(request, 'schoolapp/information.html'), name='information'),

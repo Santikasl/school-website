@@ -23,9 +23,9 @@
                     <h2 class="info__title">Новости</h2>
                     <form class="sort_form" action="{% url 'news' %}" method="get">
 
-                        <input class="sort_value" name="order_field" type="submit" value="-date">
+{#                        <input class="sort_value" name="order_field" type="submit" value="-date">#}
                         <input class="sort" name="order_field" type="submit" value="Новые">
-                        <input class="sort_value" name="order_field" type="submit" value="date">
+{#                        <input class="sort_value" name="order_field" type="submit" value="date">#}
                         <input class="sort" name="order_field" type="submit" value="Старые">
                     </form>
 
@@ -37,9 +37,12 @@
                                placeholder="Поиск" id="search-input" value="">
                     </form>
                 </div>
+            {% if news %}
                 <div class="news_items">
+
                     {% for news in news %}
-                        <a href="page_11.html" class="news__image">
+
+                        <a href="{{ news.pk }}" class="news__image">
 
                             <div class="news_item">
 
@@ -64,6 +67,9 @@
                     </nav>
 
                 </div>
+           {% else %}
+                <img class="not_found" src="{% static 'img/404.gif' %}" alt="">
+            {% endif %}
             </section>
 
         </section>
