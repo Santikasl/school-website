@@ -114,7 +114,8 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-
+1.psd
+icons.psd
 # Spyder project settings
 .spyderproject
 .spyproject
