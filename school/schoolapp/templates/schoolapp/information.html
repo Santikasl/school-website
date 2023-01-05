@@ -2,70 +2,458 @@
 {% load static %}
 <html lang="en">
 {% block head %}
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
-    <link rel="shortcut icon" href="{% static 'img/logo.ico' %}" type="image/x-icon">
-    <title>Информационные ресурсы</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
+        <link rel="shortcut icon" href="{% static 'img/logo.ico' %}" type="image/x-icon">
+        <title>Учительская</title>
+    </head>
 {% endblock %}
 {% block name %}
 
-        <main class="main">
+    <main class="main">
+        <section class="content">
             <section class="content">
-                <section class="content__gallery gallery">
+                <h1 class="teacher_title">Методическое объединение учителей начальных классов и воспитателей групп продлённого дня</h1>
+                <div class="gallary2">
 
-                    <div class="gallery__items">
-                        <div class="gallery__item gallery__item_big">
-                            <img src= "{% static 'img/information/1.jpg' %}" alt="">
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/1.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Бурмилова Татьяна Александровна</div>
                         </div>
-                        <div class="gallery__item2 gallery__item_big">
-                            <h2 class="gallery__title">Черчение приложение</h2>
-                            <p>Техническое черчение - один из самых сложных предметов, целью которого является развитие теоретических знаний в области черчения и начертательной геометрии, технических навыков при работе чертежными инструментами, а также развитие
-                                объемно - пространственного мышления, приобретение навыков самостоятельной работы при выполнении и чтении чертежей. Данная программа позволяет вовлечь в процесс технического творчества детей, начиная со среднего школьного
-                                возраста, дает возможность обучающимся создавать чертежи своими руками, и заложить основы успешного освоения профессии инженера в будущем.</p>
-
-
-                            <h2 class="download"><a class="download" href="https://disk.yandex.by/d/CKGVoib7XdO9CQ">Скачать</a></h2>
-
-
-                        </div>
-                        <div class="gallery__item gallery__item_big">
-                            <img src="{% static 'img/information/2.jpeg' %}" alt="">
-                        </div>
-                        <div class="gallery__item2 gallery__item_big">
-                            <h2 class="gallery__title">Астрономия приложение</h2>
-                            <p>Энциклопедия откроет для читателя дверь в мир астрономии - древней науки о звездах и планетах, в наше время переживающей буквально второе рождение. Основы астрономической науки изложены в энциклопедии понятным и доходчивым
-                                языком, она иллюстрирована замечательными рисунками из старинных атласов, современными картами звездного неба, фотографиями, выполненными орбитальным телескопом, и красочными схемами. </p>
-
-
-                            <h2 class="download"><a class="download" href="https://disk.yandex.by/d/CKGVoib7XdO9CQ">Скачать</a></h2>
-
-
-                        </div>
-
-                        <div class="gallery__item gallery__item_big">
-                            <img src="{% static 'img/information/3.jpg' %}" alt="">
-                        </div>
-                        <div class="gallery__item2 gallery__item_big">
-                            <h2 class="gallery__title">Биология приложение</h2>
-                            <p>Пособие содержит материал, соответствующий содержанию курса биологии средней школы. В нем последовательно раскрываются наиболее общие свойства живых организмов, их многообразие от бактерий до человека, распространение, среда
-                                обитания, классификация, особенности строения и процессов жизнедеятельности, значение в природе и жизни человека</p>
-
-
-                            <h2 class="download"><a class="download" href="https://disk.yandex.by/d/CKGVoib7XdO9CQ">Скачать</a></h2>
-
-
-                        </div>
-
-
                     </div>
-                </section>
-
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/2.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Гончарова Мария Юрьевна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/anonimus.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Дашук Надежда Михайловна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/3.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Левченко Татьяна Валентиновна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/4.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Морозова Ирина Александровна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/5.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Никитина Татьяна Брониславовна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/6.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Новикова Татьяна Петровна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/7.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Плесская Марина Алексеевна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/8.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Селюкова Елена Александровна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/9.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Смирнова Ольга Александровна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/10.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Федянина Мария Сергеевна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/anonimus.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Шеповалов Масим Дмитревич</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/11.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Янкова Валентина Валерьевна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/12.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Янкова Тамара Михайловна</div>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="teacher_title">Методическое объединение учителей биологии, химии, истории, географии</h1>
+                <div class="gallary2">
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/13.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Вышникова Надежда Петровна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/14.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Лопич Сергей Николаевич</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/15.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Мищенкова Наталья Михайловна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/16.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Серик Тамара Ивановна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/anonimus.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Федосеенко Марина Александровна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/17.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Ятина Наталья Владимировна</div>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="teacher_title">Методическое объединение учителей белорусского и русского языков</h1>
+                <div class="gallary2">
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/18.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Анощенко Татьяна Дмитриевна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/19.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Баль Галина Викторовна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/20.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Баль Людмила Ивановна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/21.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Бодунова Елена Викторовна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/22.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Громыко Юлия Владимировна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/anonimus.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Напреенко Виктория Викторовна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/23.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Протасенко Алла Владимировна</div>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="teacher_title">Методическое объединение учителей математики, физики и информатики</h1>
+                <div class="gallary2">
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/24.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Дробушевская Елена Станиславовна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/25.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Макаренко Виктория Георгиевна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/26.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Марченко Людмила Васильевна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/27.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Одноочко Павел Викторович</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/28.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Трощенко Галина Викторовна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/29.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Цубатова Елена Максимовна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/30.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Ясиновская Наталья Алоизовна</div>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="teacher_title">Методическое объединение учителей иностранных языков</h1>
+                <div class="gallary2">
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/31.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Гаврилова Татьяна Леонтьевна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/32.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Кособукина Александра Александровна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/33.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Рыжкова Инна Александровна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/34.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Фролова Надежда Николаевна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/35.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Хавхун Светлана Леонидовна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/36.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Шугова Алеся Александровна</div>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="teacher_title">Методическое объединение учителей физической культуры и спорта</h1>
+                <div class="gallary2">
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/37.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Блашкевич Дмитрий Владимирович</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/38.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Головнева Динара Васифовна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/39.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Дробышевская Евгения Олеговна</div>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="teacher_title">Методическое объединение социально-психологической направленности</h1>
+                <div class="gallary2">
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/anonimus.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Андрюк Надежда Викторовна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/anonimus.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Антанюк Анастасия Алексеевна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/40.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Гавриленко Людмила Яковлевна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/41.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Карташёва Анастасия Викторовна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/42.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Крумкачёва Юлия Сергеевна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/43.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Молчанова Анна Сергеевна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/anonimus.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Орлова Кристина Юрьевна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/44.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Топчаева Надежда Владимировна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/anonimus.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Туркова Татьяна Викторовна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/anonimus.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Шедова Ирина Андреевна</div>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="teacher_title">Методическое объединение учителей трудового обучения и искусства</h1>
+                <div class="gallary2">
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/anonimus.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Баранова Вера Александровна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/45.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Короткевич Мария Александровна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/46.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Руденкова Татьяна Михайловна</div>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/47.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Хоменкова Елена Петровна</div>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="teacher_title">Инженер-программист</h1>
+                <div class="gallary2">
+                    <div class="teacher">
+                        <div>
+                            <img class="teacher_img" src="{% static 'img/teacher/48.jpg' %}" height="230px"
+                                 width="300px">
+                            <div class="desc">Ванькович Анастаcd сия Александровна</div>
+                        </div>
+                    </div>
+                </div>
             </section>
-        </main>
+
+        </section>
+    </main>
 
 
 {% endblock %}
