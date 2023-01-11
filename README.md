@@ -5,7 +5,9 @@
 Description
 =============
 Simple website for school on python 3.10 with django 4.1.3
-##Stack
+
+Stack
+=============
 - Python 3.10
 - Django 4.1.3
 - HTML
